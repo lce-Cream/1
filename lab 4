@@ -1,0 +1,41 @@
+#include <iostream>
+#include <math.h>
+#include <iomanip>
+using namespace std;
+int main()
+{
+    int k,n,i,x,p;                               // k - размер массива; n - количество сдвигов; i - счётчик;
+    cout << "mas size = ";         cin >> k;     // p - счётчик количества сдвигов; x - переменная для хранения последнего значения массива
+    cout << "number of shifts = "; cin >> n;
+
+    int mas[k];
+
+    for (i=0; i<=k; i++)
+    {
+        cout<<setw(k)<<" "<< setw(k)<< "["<<i<<"] = ";
+        cin>>mas[i];
+    }
+        cout<<endl;
+
+    for (p=1; p<=n; p++)
+        {
+
+        x=mas[0];
+        cout<<"shift "<<p<<endl;
+
+    for (i=0; i<k; i++)
+    {
+
+        mas[i]=mas[i+1];
+        cout <<"[" << mas[i] <<"]" << endl;
+
+    }
+        mas[k]=x;
+
+        cout << "[" << mas[k] << "]" << endl <<" "<< endl;
+
+        }
+
+    return 0;
+}
+
